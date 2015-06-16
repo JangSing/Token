@@ -36,7 +36,7 @@ typedef struct{
   char *symbol;
   Arity arity;
   Associativity Assoc;
-  Token *token[1];
+  Token *token[0];
 }OperatorToken;
 
 
