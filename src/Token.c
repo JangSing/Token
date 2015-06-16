@@ -18,8 +18,8 @@
  * Integer Token.
  *  inputs:
  *    -value
- * 	return:
- *	  -Token
+ *  return:
+ *    -Token
  *
  */
 
