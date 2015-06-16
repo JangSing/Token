@@ -7,44 +7,44 @@
  * 
  * The createOperatorToken will assign the value of the element of the
  * Operator Token.
- * 	inputs:
- * 		-symbol
- *		-arity
- *		-Associativity
- *	return:
- * 		-Token
+ *  inputs:
+ *    -symbol
+ *    -arity
+ *    -Associativity
+ *  return:
+ *    -Token
  *
  * The createIntegerToken will assign the value of the element of the 
  * Integer Token.
- * 	inputs:
- * 		-value
+ *  inputs:
+ *    -value
  * 	return:
- *		-Token
+ *	  -Token
  *
  */
 
 Token *createOperatorToken(char *symbol, Arity arity,Associativity Assoc) {
-	//allocating memory for the pointers opTok
-		OperatorToken *opTok =malloc(sizeof(OperatorToken)+sizeof(Token *)*2);
+  //allocating memory for the pointers opTok
+    OperatorToken *opTok =malloc(sizeof(OperatorToken)+sizeof(Token *)*2);
 	
-	//assigning the value for OperatorToken
-		opTok->type=TOKEN_OPERATOR_TYPE;
-		opTok->symbol=symbol;
-		opTok->arity=arity;
-		opTok->Assoc=Assoc;
+  //assigning the value for OperatorToken
+    opTok->type=TOKEN_OPERATOR_TYPE;
+    opTok->symbol=symbol;
+    opTok->arity=arity;
+    opTok->Assoc=Assoc;
 	
-	return (Token *)opTok;
+  return (Token *)opTok;
 }
 
 Token *createIntegerToken(int value){
-	//allocating memory for the pointers IntTok
-		IntegerToken *IntTok =malloc(sizeof(IntegerToken));
+  //allocating memory for the pointers IntTok
+    IntegerToken *IntTok =malloc(sizeof(IntegerToken));
 	
-	//assigning the value for IntegerToken
-		IntTok->type=TOKEN_INTEGER_TYPE;
-		IntTok->value=value;
+  //assigning the value for IntegerToken
+    IntTok->type=TOKEN_INTEGER_TYPE;
+    IntTok->value=value;
 	
-	return (Token *)IntTok;
+  return (Token *)IntTok;
 }
 
 
